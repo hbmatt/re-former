@@ -1,3 +1,14 @@
+<h1>Edit <%= @user.username %></h1>
+
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+    <ul><% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %></ul>
+  </div>
+<% end %>
+
 <%= form_for @user, url: {action:"update"} do |f| %>
   <%= f.label :username, "New Username (3-15 Characters):" %>
   <%= f.text_field :username, placeholder: "bigbud" %><BR>

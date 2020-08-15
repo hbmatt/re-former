@@ -9,3 +9,11 @@
   border-radius: 3px;
   padding: 4px;
 }
+
+#error_explanation {
+  border: 2px solid red;
+  border-radius: 5px;
+  margin: 0 auto 20px auto;
+  padding: 10px;
+  width: 75%;
+}
