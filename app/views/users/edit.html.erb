@@ -1,0 +1,9 @@
+<%= form_for @user, url: {action:"update"} do |f| %>
+  <%= f.label :username, "New Username (3-15 Characters):" %>
+  <%= f.text_field :username, placeholder: "bigbud" %><BR>
+  <%= f.label :email, "New Email:" %>
+  <%= f.text_field :email, placeholder: "example@email.com" %><BR>
+  <%= f.label :password, "New Password (6-20 Characters):" %>
+  <%= f.password_field :password %><BR>
+  <%= f.submit "Update User" %>
+<% end %>
